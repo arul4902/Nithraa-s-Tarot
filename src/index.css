@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-deep: #351044;
+  --color-purple-plum: #4A174F;
+  --color-purple-dark: #240A2E;
+  --color-purple-muted: #5E2664;
+  --color-gold-warm: #C49A45;
+  --color-gold-light: #DFB865;
+  --color-gold-pale: #F4E8CD;
+  --color-cream-champagne: #FFF8E9;
+  --color-ivory-soft: #FFFCF6;
+  --color-rose-muted: #E9C5CF;
+  --color-rose-light: #F7E8EC;
+  --color-rose-deep: #D49BA8;
+  
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: rgba(196, 154, 69, 0.2);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-purple-deep);
+    background-color: var(--color-ivory-soft);
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-purple-deep);
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+}
+
+/* Custom Typography & Decorative Utilities */
+.font-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-celestial {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.12em;
+}
+
+.font-body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Gold Gradient Accents */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C49A45 0%, #DFB865 50%, #B38634 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-luminous {
+  background: linear-gradient(135deg, #FFF3D6 0%, #DFB865 40%, #C49A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #C49A45 0%, #DFB865 50%, #B68936 100%);
+}
+
+.bg-gold-gradient:hover {
+  background: linear-gradient(135deg, #DFB865 0%, #C49A45 50%, #A47728 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(196, 154, 69, 0.3);
+}
+
+.border-gold-glow {
+  border-color: rgba(196, 154, 69, 0.5);
+  box-shadow: 0 0 15px rgba(196, 154, 69, 0.12);
+}
+
+/* Delicate Celestial & Ornamental Details */
+.celestial-star {
+  display: inline-block;
+  color: #C49A45;
+  opacity: 0.85;
+}
+
+.card-luxury {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 154, 69, 0.22);
+  box-shadow: 0 4px 20px -2px rgba(53, 16, 68, 0.05), 0 0 3px rgba(196, 154, 69, 0.1);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card-luxury:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 154, 69, 0.5);
+  box-shadow: 0 16px 32px -4px rgba(53, 16, 68, 0.1), 0 0 16px rgba(196, 154, 69, 0.18);
+}
+
+/* Subtle Shimmer & Ambient Atmosphere */
+.ambient-glow-purple {
+  background: radial-gradient(circle at 50% 50%, rgba(74, 23, 79, 0.12) 0%, rgba(255, 252, 246, 0) 70%);
+}
+
+.ambient-glow-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(196, 154, 69, 0.1) 0%, rgba(255, 252, 246, 0) 70%);
+}
+
+.cosmic-purple-bg {
+  background: linear-gradient(175deg, #351044 0%, #4A174F 60%, #2A0937 100%);
+}
+
+/* Smooth Focus states */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #C49A45;
+  outline-offset: 3px;
+}
+
+/* Accessible Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
